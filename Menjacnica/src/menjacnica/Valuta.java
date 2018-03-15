@@ -40,6 +40,7 @@ public class Valuta {
 
 	@Override
 	public int hashCode() {
+		
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((kursevi == null) ? 0 : kursevi.hashCode());
@@ -50,6 +51,7 @@ public class Valuta {
 
 	@Override
 	public boolean equals(Object obj) {
+		
 		if (this == obj)
 			return true;
 		if (obj == null)
