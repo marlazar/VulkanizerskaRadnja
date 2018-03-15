@@ -13,6 +13,8 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if (naziv == null)
+			throw new RuntimeException("Vrednost naziva je null vrednost");
 		this.naziv = naziv;
 	}
 
@@ -21,6 +23,8 @@ public class Valuta {
 	}
 
 	public void setSkracenica(String skracenica) {
+		if (skracenica == null)
+			throw new RuntimeException("Vrednost skracenice je null vrednost");
 		this.skracenica = skracenica;
 	}
 
@@ -29,6 +33,8 @@ public class Valuta {
 	}
 
 	public void setKursevi(LinkedList<Kurs> kursevi) {
+		if (kursevi == null)
+			throw new RuntimeException("Vrednost liste je null");
 		this.kursevi = kursevi;
 	}
 
