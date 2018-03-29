@@ -67,7 +67,7 @@ public class AutoGuma {
 	 */
 
 	public void setPrecnik(int precnik) {
-		if (precnik < 13 && precnik > 22)
+		if (precnik < 13 || precnik > 22)
 			throw new RuntimeException("Precnik van opsega");
 		this.precnik = precnik;
 	}
@@ -88,7 +88,7 @@ public class AutoGuma {
 	 */
 
 	public void setSirina(int sirina) {
-		if (sirina < 135 && sirina > 355)
+		if (sirina < 135 || sirina > 355)
 			throw new RuntimeException("Sirina van opsega");
 		this.sirina = sirina;
 	}
@@ -132,7 +132,7 @@ public class AutoGuma {
 	 */
 	
 	@Override
-	public boolean equals(Object obj) {
+ 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -143,6 +143,7 @@ public class AutoGuma {
 		if (markaModel == null) {
 			if (other.markaModel != null)
 				return false;
+
 		} else if (!markaModel.equals(other.markaModel))
 			return false;
 		if (precnik != other.precnik)
@@ -152,5 +153,5 @@ public class AutoGuma {
 		if (visina != other.visina)
 			return false;
 		return true;
-	}
+ 	}
 }
