@@ -17,7 +17,7 @@ public class VulkanizerskaRadnja {
 	/**
 	 * Lista objekata klase AutoGuma
 	 */
-	private LinkedList<AutoGuma> gume = new LinkedList<AutoGuma>();
+	public LinkedList<AutoGuma> gume = new LinkedList<AutoGuma>();
 	
 	/**
 	 * Klasa koja dodaje gumu u listu, ako objekat nije null ili vec postoji
@@ -44,10 +44,13 @@ public class VulkanizerskaRadnja {
 		if (markaModel == null)
 			return null;
 		LinkedList<AutoGuma> novaLista = new LinkedList<AutoGuma>();
-		for (int i = 0; i < gume.size(); i++)
-			if (gume.get(i).equals(markaModel))
+		for(int i=0;i<gume.size();i++) {
+			if (gume.get(i).getMarkaModel().equals(markaModel))
 				novaLista.add(gume.get(i));
-		return novaLista;
+		}
+
+			if(novaLista.size()==0) return null;
+			else return novaLista;
 	}
 
 	
